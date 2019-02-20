@@ -139,7 +139,7 @@ body {
   height: 100%;
 }
 body {
-  background-color: lightgray;
+  background-color: #CCEBE8;
 }
 .container {
   max-width: 1000px;
@@ -188,6 +188,29 @@ nav a {
 .main-content .content-box {
   width: 45%;
   height: 200px;
-  background: #1DB5CD;
-  border: 1px solid red;
+  background: white;
+  margin: 20px 0;
+}
+.main-content .content-box h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  text-decoration: underline;
+  margin: 20px 0;
+}
+.main-content .content-box ul {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2rem;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.main-content .content-box ul li {
+  margin: 16px auto;
+}
+.main-content .content-box ul li a {
+  text-decoration: none;
+  color: black;
+}
+.main-content .content-box ul li a:hover {
+  text-decoration: underline;
 }

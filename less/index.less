@@ -1,7 +1,10 @@
 // Variables
 
 @font-stack: Montserrat, sans-serif;
+
 @test-border: 1px solid red;
+
+@mobile: ( max-width: 500px );
 
 // Color Variables
 @java: #1DB5CD;
@@ -153,7 +156,7 @@ body {
 }
 
 body {
-  background-color: lightgray;
+  background-color: #CCEBE8;
 }
 
 .container {
@@ -211,7 +214,38 @@ nav {
 	.content-box {
 		width: 45%;
 		height: 200px;
-		background: @java;
-		border: @test-border;
+		background: white;
+		margin: 20px 0;
+	
+		h2 {
+			font-size: 2.8rem;
+			text-align: center;
+			text-decoration: underline;
+			margin: 20px 0;
+		}
+
+		ul {
+			width: 80%;
+			margin: 0 auto;
+			font-size: 2rem;
+			list-style-type: disc;
+			list-style-position: outside;
+
+			li {
+				margin: 16px auto;
+
+				a {
+					text-decoration: none;
+					color: black;
+				}
+
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+
+
 	}
 }
