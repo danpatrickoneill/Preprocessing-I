@@ -4,10 +4,28 @@
 
 @test-border: 1px solid red;
 
-@mobile: ( max-width: 500px );
+@mobile: (max-width: 500px);
 
 // Color Variables
-@java: #1DB5CD;
+@java: #1db5cd;
+
+// Mixins
+
+.plain-link() {
+  text-decoration: none;
+  color: black;
+}
+
+.plain-link-hover() {
+  text-decoration: underline;
+  color: @java;
+}
+
+.centered-column() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -147,7 +165,7 @@ table {
 
 html {
   font-size: 62.5%;
-	font-family: @font-stack;
+  font-family: @font-stack;
 }
 
 html,
@@ -156,96 +174,115 @@ body {
 }
 
 body {
-  background-color: #CCEBE8;
+  background-color: darkgray;
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
-	border: @test-border;
 }
 
 nav {
-	width: 100%;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
 
-	a {
-		font-size: 2rem;
-		color: black;
-		text-decoration: none;
-	}
+  @media @mobile {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  a {
+    font-size: 2rem;
+    .plain-link();
+  }
+
+  a:hover {
+    .plain-link-hover();
+  }
+
+  .logo {
+    @media @mobile {
+      display: none;
+    }
+  }
 }
 
 .top-content {
-	width: 90%;
-	margin: 0 auto;
-	padding: 20px;
-	background: white;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  width: 90%;
+  margin: 0 auto 40px;
+  padding: 20px;
+  border-radius: 25px;
+  background: lightgray;
+  .centered-column();
 
-	img {
-		width: 25%;
-	}
+  img {
+    width: 25%;
+  }
 
-	h1 {
-		font-size: 3.6rem;
-		margin-top: 20px;
-	}
+  h1 {
+    font-size: 3.6rem;
+    text-align: center;
+    margin-top: 20px;
+  }
 
-	section {
-		margin-top: 90px;
-		font-size: 2rem;
-		text-align: center;
-	}
-
+  section {
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 
 .main-content {
-	width: 80%;
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-	.content-box {
-		width: 45%;
-		height: 200px;
-		background: white;
-		margin: 20px 0;
-	
-		h2 {
-			font-size: 2.8rem;
-			text-align: center;
-			text-decoration: underline;
-			margin: 20px 0;
-		}
+  @media @mobile {
+    .centered-column();
+  }
 
-		ul {
-			width: 80%;
-			margin: 0 auto;
-			font-size: 2rem;
-			list-style-type: disc;
-			list-style-position: outside;
+  .content-box {
+    min-width: 45%;
+    min-height: 200px;
+    background: lightgray;
+    margin: 0 0 40px;
+    border-radius: 25px;
 
-			li {
-				margin: 16px auto;
+    @media @mobile {
+      width: 90%;
+      word-wrap: break-word;
+    }
 
-				a {
-					text-decoration: none;
-					color: black;
-				}
+    h2 {
+      font-size: 2.8rem;
+      text-align: center;
+      text-decoration: underline;
+      margin: 20px 0;
+    }
 
-				a:hover {
-					text-decoration: underline;
-				}
-			}
-		}
+    ul {
+      width: 80%;
+      margin: 0 auto;
+      font-size: 2rem;
+      list-style-type: disc;
+      list-style-position: outside;
 
+      li {
+        margin: 16px auto;
 
+        a {
+          .plain-link();
+        }
 
-	}
+        a:hover {
+          .plain-link-hover();
+        }
+      }
+    }
+  }
 }
