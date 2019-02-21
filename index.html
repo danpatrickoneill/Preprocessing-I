@@ -1,19 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dan O'Neill's Digital Resume</title>
 
-  <title>My Resume</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/index.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#contact">Contact</a>
+        <a class="logo" href="index.html">
+          <img src="images/DPO-Icon.png" alt="dpo-logo"
+        /></a>
+      </nav>
+      <div class="top-content">
+        <img
+          src="images/dpo-headshot.jpg"
+          alt="Daniel O'Neill, a handsome man"
+          class="headshot"
+        />
+        <h1>Dan O'Neill, Web Dev for Hire</h1>
+        <section class="bio">
+          <p>
+            Hello! My name is Dan O'Neill. You should hire me! Why, you ask?
+            Read on! (Also, look at the webpage you're currently on.)
+          </p>
+        </section>
+      </div>
+      <div class="main-content">
+        <section class="content-box">
+          <h2>Skills</h2>
+          <ul>
+            <li>Full Stack Web Development</li>
+            <li>Javascript + Python</li>
+            <li>Editing/Proofreading</li>
+          </ul>
+        </section>
+        <section class="content-box">
+          <h2>Work History</h2>
+          <ul>
+            <li>Marketing Director, Strat-O-Matic Media</li>
+            <li>Data Analyst, Amazon.com</li>
+            <li>Researcher, Infinata</li>
+          </ul>
+        </section>
+        <section class="content-box">
+          <h2>Get in Touch!</h2>
+          <ul>
+            <li id="contact">
+              <a href="mailto:danpatrickoneill@gmail.com"> Email me!</a>
+            </li>
+            <li><a href="tel:7742696689">Call me!</a></li>
+            <li>
+              <a href="https://github.com/danpatrickoneill"
+                >Check out my work!</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>
